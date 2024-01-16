@@ -44,7 +44,9 @@ class _ContactsListState extends State<ContactsList> {
 
   void delContact(index) {
     setState(() {
-      listes.removeAt(index);
+      if (listes[index][1]) {
+        listes.removeAt(index);
+      }
     });
   }
 
